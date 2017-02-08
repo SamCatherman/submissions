@@ -1,0 +1,10 @@
+<h1>DCMD Submissions Page</h1>
+<% @submissions.each do |submission| %>
+
+  <p>
+  <%= link_to submission.title, submission_path(submission) %>
+</p>
+<% end %>
+
+<%= link_to "(+)", new_submission_path %>
+<%= link_to "home", root_path %>
