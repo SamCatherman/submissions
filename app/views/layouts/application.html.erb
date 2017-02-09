@@ -19,7 +19,7 @@
             <%= link_to "Sign In", new_session_path %>
             <%= link_to "Sign Up", new_user_path %>
           <% end %>
-          <%= link_to "Submissions", submissions_path %>
+          <%= link_to "Submissions", submissions_path if @current_user %>
         </nav>
         </div>
         <div class="col-xs-9">
