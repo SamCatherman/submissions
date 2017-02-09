@@ -3953,3 +3953,201 @@ Processing by SubmissionsController#index as HTML
 Completed 200 OK in 58ms (Views: 54.9ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/submissions/1" for 127.0.0.1 at 2017-02-09 16:49:09 -0500
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubmission Load (0.3ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  Rendered submissions/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 70ms (Views: 63.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/submissions/1" for 127.0.0.1 at 2017-02-09 16:49:51 -0500
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  Rendered submissions/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 47ms (Views: 44.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2017-02-09 16:49:53 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 64ms (Views: 62.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2017-02-09 16:49:58 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tu5uULDiVrYQLzM72BqpvQFrNEoWp2T9fFxVUwZ0/g6b1lTr7bk4x5ZC7fmXT3ERTc3FOz+l6K0ez/Q2aM/S+w==", "user"=>{"username"=>"Samwise", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Samwise"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Samwise"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2017-02-09 16:49:58 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 49ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2017-02-09 16:50:01 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 72ms (Views: 68.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-02-09 16:50:02 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 67ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-02-09 16:50:07 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PgPCXyuFkeYjHGNWQ+rtMQWQlbwlJwt1i+shOpiKbi2hRQRBTj6VKn2Ztul9qgN+D8WKOKAaKbR0ezmB4bFVog==", "user"=>{"username"=>"Samwise", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password") VALUES ($1, $2) RETURNING "id"[0m  [["username", "Samwise"], ["password", "password1"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users.2
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/users.2" for 127.0.0.1 at 2017-02-09 16:50:07 -0500
+Processing by UsersController#index as 
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 73ms (Views: 53.8ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/session" for 127.0.0.1 at 2017-02-09 16:50:11 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"m33wetZKNF+2hqwxeMZh6NhW7I8jSkDzHvnRJRYqwBrVJ6o3mJSCv5vScllDQh30OCrpmzijPmxNKb1e04ztGQ=="}
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-09 16:50:11 -0500
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions"[0m
+  Rendered submissions/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 49ms (Views: 47.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2017-02-09 16:50:12 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 64ms (Views: 61.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2017-02-09 16:50:16 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ENUqkrjv/wREyCCULzcSjHnmcGSdZrakHnSrVnh3ZfjCmM2ECpbDzLdTUFjXh5rH46P/V7PtTX3ksKyWkbGvIw==", "user"=>{"username"=>"Samwise", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Samwise"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Samwise"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/session/new
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2017-02-09 16:50:16 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 46ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2017-02-09 16:50:50 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 61ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2017-02-09 16:50:57 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mVKoWDxtfWj2wKebRlgL9g2unxMgTmyXGtwDazgu4NNLH09OjhRBoAVb11e+6IO9l+sQIA7Fl07gGASr0egqCA==", "user"=>{"username"=>"Samwise", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Samwise"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Samwise"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-09 16:50:57 -0500
+Processing by SubmissionsController#index as HTML
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.3ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions"[0m
+  Rendered submissions/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 51ms (Views: 45.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/submissions/1" for 127.0.0.1 at 2017-02-09 16:51:06 -0500
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  Rendered submissions/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 61ms (Views: 53.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/submissions/1/edit" for 127.0.0.1 at 2017-02-09 16:51:11 -0500
+Processing by SubmissionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Exists (3.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering submissions/edit.html.erb within layouts/application
+  Rendered submissions/_form.html.erb (6.6ms)
+  Rendered submissions/edit.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 70ms (Views: 62.1ms | ActiveRecord: 4.3ms)
+
+
+Started PATCH "/submissions/1" for 127.0.0.1 at 2017-02-09 16:51:15 -0500
+Processing by SubmissionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9Fl6woR2WZ8h+3mB6niUnl6IQ5lsdIkhL06S0oR/9CsHo1ev88XuU1Jrlr4RI7nNCbdY8pdnxBJyMle98zzv/w==", "submission"=>{"title"=>"first", "author"=>"Sam", "body"=>"This is the first post in the line, Edit"}, "commit"=>"Update Submission", "id"=>"1"}
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubmission Load (1.5ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "submissions" SET "body" = $1, "updated_at" = $2 WHERE "submissions"."id" = $3[0m  [["body", "This is the first post in the line, Edit"], ["updated_at", 2017-02-09 21:51:15 UTC], ["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/submissions/1
+Completed 302 Found in 11ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/submissions/1" for 127.0.0.1 at 2017-02-09 16:51:15 -0500
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubmission Load (0.5ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  Rendered submissions/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 48ms (Views: 42.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/submissions" for 127.0.0.1 at 2017-02-09 16:51:20 -0500
+Processing by SubmissionsController#index as HTML
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (2.8ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions"[0m
+  Rendered submissions/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 66ms (Views: 55.8ms | ActiveRecord: 6.9ms)
+
+

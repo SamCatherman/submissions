@@ -6,4 +6,4 @@
 <%= link_to "Back", submissions_path %>
 <p><%= link_to 'Delete Submission', submission_path(@submission),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %></p>
+              data: { confirm: 'Are you sure?' } if @current_user %></p>
