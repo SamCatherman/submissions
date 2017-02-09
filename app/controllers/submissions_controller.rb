@@ -1,9 +1,5 @@
 class SubmissionsController < ApplicationController
-  before_action :set_session
 
-  def set_session
-    session[:history] ||=[]
-  end
 
   def index
     @submissions = Submission.all
@@ -11,7 +7,6 @@ class SubmissionsController < ApplicationController
 
   def show
     @submission = Submission.find(params[:id])
-    session[:history].push(@submission.body)
   end
 
   def new
