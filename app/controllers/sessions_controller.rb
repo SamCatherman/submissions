@@ -1,8 +1,9 @@
 class SessionsController < ApplicationController
+#initializes new session
   def new
     @user = User.new
   end
-
+#begins new session
   def create
     input_username = params[:user][:username] #save username value submitted through form
 
@@ -25,7 +26,7 @@ class SessionsController < ApplicationController
       redirect_to new_session_path
     end
   end
-
+#ends session
   def destroy
     reset_session
     puts "Successfully signed out"
