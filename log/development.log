@@ -2825,3 +2825,576 @@ Processing by SubmissionsController#index as HTML
 Completed 200 OK in 51ms (Views: 48.8ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/submissions" for 127.0.0.1 at 2017-02-09 15:10:49 -0500
+  
+SyntaxError (/Users/samcatherman/CodezHere/DCMD/config/routes.rb:4: syntax error, unexpected [, expecting keyword_do or '{' or '('
+  resources :submissions, except [:new, :create]
+                                  ^):
+  
+config/routes.rb:4: syntax error, unexpected [, expecting keyword_do or '{' or '('
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.7ms)
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.3ms)
+Started GET "/submissions" for 127.0.0.1 at 2017-02-09 15:11:21 -0500
+Processing by SubmissionsController#index as HTML
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `get_current_user' for #<SubmissionsController:0x007fb234a2fba0>
+Did you mean?  set_current_user):
+  
+activesupport (5.0.1) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+activesupport (5.0.1) lib/active_support/callbacks.rb:169:in `block (2 levels) in halting'
+actionpack (5.0.1) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.0.1) lib/active_support/callbacks.rb:170:in `block in halting'
+activesupport (5.0.1) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.1) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (106.0ms)
+Started GET "/submissions" for 127.0.0.1 at 2017-02-09 15:12:17 -0500
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.3ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions"[0m
+  Rendered submissions/index.html.erb within layouts/application (119.4ms)
+Completed 500 Internal Server Error in 129ms (ActiveRecord: 4.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_submission_path' for #<#<Class:0x007fb23492a688>:0x007fb234929418>
+Did you mean?  new_session_path
+               new_user_path
+               edit_submission_path):
+     6: </p>
+     7: <% end %>
+     8: 
+     9: <%= link_to "(+)", new_submission_path %>
+    10: <%= link_to "home", root_path %>
+  
+app/views/submissions/index.html.erb:9:in `_app_views_submissions_index_html_erb__3418681337860249086_70201681467280'
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (66.4ms)
+Started GET "/submissions" for 127.0.0.1 at 2017-02-09 15:19:28 -0500
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.3ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions"[0m
+  Rendered submissions/index.html.erb within layouts/application (123.5ms)
+Completed 500 Internal Server Error in 133ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_submission_path' for #<#<Class:0x007fb22de5fdd0>:0x007fb22de5eb60>
+Did you mean?  new_session_path
+               new_user_path
+               edit_submission_path):
+     6: </p>
+     7: <% end %>
+     8: 
+     9: <%= link_to "(+)", new_submission_path %>
+    10: <%= link_to "home", root_path %>
+  
+app/views/submissions/index.html.erb:9:in `_app_views_submissions_index_html_erb__3418681337860249086_70201633538940'
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (63.0ms)
+Started GET "/submissions" for 127.0.0.1 at 2017-02-09 15:21:17 -0500
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.3ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions"[0m
+  Rendered submissions/index.html.erb within layouts/application (138.2ms)
+Completed 500 Internal Server Error in 148ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_submission_path' for #<#<Class:0x007fb22de5fdd0>:0x007fb22dd528e8>
+Did you mean?  new_session_path
+               new_user_path
+               edit_submission_path):
+     6: </p>
+     7: <% end %>
+     8: 
+     9: <%= link_to "(+)", new_submission_path %>
+    10: <%= link_to "home", root_path %>
+  
+app/views/submissions/index.html.erb:9:in `_app_views_submissions_index_html_erb__3418681337860249086_70201624926620'
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.0ms)
+Started GET "/submissions" for 127.0.0.1 at 2017-02-09 15:21:43 -0500
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions"[0m
+  Rendered submissions/index.html.erb within layouts/application (127.9ms)
+Completed 500 Internal Server Error in 133ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_submission_path' for #<#<Class:0x007fb22de5fdd0>:0x007fb22ddf7050>
+Did you mean?  new_session_path
+               new_user_path
+               edit_submission_path):
+     6: </p>
+     7: <% end %>
+     8: 
+     9: <!-- <%= link_to "(+)", new_submission_path %> -->
+    10: <%= link_to "home", root_path %>
+  
+app/views/submissions/index.html.erb:9:in `_app_views_submissions_index_html_erb__3418681337860249086_70201625263440'
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.1ms)
+Started GET "/submissions" for 127.0.0.1 at 2017-02-09 15:21:49 -0500
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (1.1ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions"[0m
+  Rendered submissions/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 79ms (Views: 75.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2017-02-09 15:21:52 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 55ms (Views: 43.6ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2017-02-09 15:22:00 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ltEfG3XoldQHw0PuCnAJMia8R/OQRPRZjEqFxU0/UiebgBtw44HMUExS9QLE7THeTXE67/lMxnvgArIa8wRxyA==", "user"=>{"username"=>"Samwise", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Samwise"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Samwise"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-09 15:22:00 -0500
+Processing by SubmissionsController#index as HTML
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.3ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions"[0m
+  Rendered submissions/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 42ms (Views: 36.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-09 15:22:10 -0500
+Processing by SubmissionsController#index as HTML
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.3ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions"[0m
+  Rendered submissions/index.html.erb within layouts/application (124.4ms)
+Completed 500 Internal Server Error in 134ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_submission_path' for #<#<Class:0x007fb22de5fdd0>:0x007fb22eccd930>
+Did you mean?  new_session_path
+               new_user_path
+               edit_submission_path):
+     5:   <%= link_to submission.title, submission_path(submission) %>
+     6: </p>
+     7: <% end %>
+     8: <%= link_to "(+)", new_submission_path %>
+     9: 
+    10: <%= link_to "home", root_path %>
+  
+app/views/submissions/index.html.erb:8:in `_app_views_submissions_index_html_erb__3418681337860249086_70201633042860'
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (63.3ms)
+Started GET "/" for 127.0.0.1 at 2017-02-09 15:22:26 -0500
+Processing by SubmissionsController#index as HTML
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.3ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions"[0m
+  Rendered submissions/index.html.erb within layouts/application (138.4ms)
+Completed 500 Internal Server Error in 147ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_submission_path' for #<#<Class:0x007fb22de5fdd0>:0x007fb2325b0770>
+Did you mean?  new_session_path
+               new_user_path
+               edit_submission_path):
+    5:   <%= link_to submission.title, submission_path(submission) %>
+    6: </p>
+    7: <% end %>
+    8: <%= link_to "(+)", new_submission_path %>
+    9: <%= link_to "home", root_path %>
+  
+app/views/submissions/index.html.erb:8:in `_app_views_submissions_index_html_erb__3418681337860249086_70201662867740'
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (72.4ms)
+Started GET "/" for 127.0.0.1 at 2017-02-09 15:23:38 -0500
+Processing by SubmissionsController#index as HTML
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions"[0m
+  Rendered submissions/index.html.erb within layouts/application (130.7ms)
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_submission_path' for #<#<Class:0x007fb22de5fdd0>:0x007fb232679198>
+Did you mean?  new_session_path
+               new_user_path
+               edit_submission_path):
+    5:   <%= link_to submission.title, submission_path(submission) %>
+    6: </p>
+    7: <% end %>
+    8: <%= link_to "(+)", new_submission_path %>
+    9: <%= link_to "home", root_path %>
+  
+app/views/submissions/index.html.erb:8:in `_app_views_submissions_index_html_erb__3418681337860249086_70201663278960'
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.6ms)
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.6ms)
+Started GET "/" for 127.0.0.1 at 2017-02-09 15:24:42 -0500
+Processing by SubmissionsController#index as HTML
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering submissions/index.html.erb within layouts/application
+  Rendered submissions/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.3ms)
+
+
+  
+SyntaxError (/Users/samcatherman/CodezHere/DCMD/app/views/submissions/index.html.erb:8: syntax error, unexpected ',', expecting ')'
+...buffer.append=( link_to ("(+)", new_submission_path) if @cur...
+...                               ^
+/Users/samcatherman/CodezHere/DCMD/app/views/submissions/index.html.erb:8: syntax error, unexpected ')', expecting keyword_end
+...ission_path) if @current_user );@output_buffer.safe_append='
+...                               ^):
+  
+app/views/submissions/index.html.erb:8: syntax error, unexpected ',', expecting ')'
+app/views/submissions/index.html.erb:8: syntax error, unexpected ')', expecting keyword_end
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.4ms)
+Started GET "/" for 127.0.0.1 at 2017-02-09 15:25:13 -0500
+Processing by SubmissionsController#index as HTML
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.3ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions"[0m
+  Rendered submissions/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 53ms (Views: 48.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/submissions" for 127.0.0.1 at 2017-02-09 15:25:16 -0500
+Processing by SubmissionsController#index as HTML
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.8ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions"[0m
+  Rendered submissions/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 64ms (Views: 56.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/submissions" for 127.0.0.1 at 2017-02-09 15:25:17 -0500
+Processing by SubmissionsController#index as HTML
+  [1m[36mUser Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.7ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions"[0m
+  Rendered submissions/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 64ms (Views: 57.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-09 15:25:19 -0500
+Processing by SubmissionsController#index as HTML
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.5ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions"[0m
+  Rendered submissions/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 73ms (Views: 65.6ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/submissions/1" for 127.0.0.1 at 2017-02-09 15:25:22 -0500
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Exists (3.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubmission Load (0.3ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering submissions/show.html.erb within layouts/application
+  Rendered submissions/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 64ms (Views: 53.9ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/submissions/new" for 127.0.0.1 at 2017-02-09 15:25:25 -0500
+Processing by SubmissionsController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSubmission Load (0.3ms)[0m  [1m[34mSELECT  "submissions".* FROM "submissions" WHERE "submissions"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Submission with 'id'=new):
+  
+app/controllers/submissions_controller.rb:9:in `show'
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.4ms)
+Started GET "/submissions/" for 127.0.0.1 at 2017-02-09 15:25:31 -0500
+Processing by SubmissionsController#index as HTML
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.3ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions"[0m
+  Rendered submissions/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 46ms (Views: 42.2ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/session" for 127.0.0.1 at 2017-02-09 15:25:33 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IcVt2Fus7GuwgJzJQnNxijDoK9Aj8jJmS+dJeAQ4ZGSZ1oNSiGy+k1y4PjvQunfy4X+MPhjYe2H/x6ZW8PGOoQ=="}
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-09 15:25:33 -0500
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.3ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions"[0m
+  Rendered submissions/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 48ms (Views: 45.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-09 15:26:07 -0500
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  Rendered submissions/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/samcatherman/CodezHere/DCMD/app/views/submissions/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+...buffer.append=( link_to ("(+)", new_submission_path) if @cur...
+...                               ^
+/Users/samcatherman/CodezHere/DCMD/app/views/submissions/index.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+...ission_path) if @current_user );@output_buffer.safe_append='
+...                               ^):
+  
+app/views/submissions/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/submissions/index.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.8ms)
+Started GET "/" for 127.0.0.1 at 2017-02-09 15:27:33 -0500
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  Rendered submissions/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/samcatherman/CodezHere/DCMD/app/views/submissions/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+...buffer.append=( link_to ("(+)", new_submission_path) if @cur...
+...                               ^
+/Users/samcatherman/CodezHere/DCMD/app/views/submissions/index.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+...ission_path) if @current_user );@output_buffer.safe_append='
+...                               ^):
+  
+app/views/submissions/index.html.erb:1: syntax error, unexpected ',', expecting ')'
+app/views/submissions/index.html.erb:1: syntax error, unexpected ')', expecting keyword_end
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/samcatherman/.rvm/gems/ruby-2.3.3@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.5ms)
+Started GET "/" for 127.0.0.1 at 2017-02-09 15:28:21 -0500
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.5ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions"[0m
+  Rendered submissions/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 61ms (Views: 50.1ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/submissions" for 127.0.0.1 at 2017-02-09 15:28:23 -0500
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions"[0m
+  Rendered submissions/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 64ms (Views: 61.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/session/new" for 127.0.0.1 at 2017-02-09 15:28:27 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 64ms (Views: 51.3ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/session" for 127.0.0.1 at 2017-02-09 15:28:31 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3aKIbpeH0woa+iJxe0bY+zGjhHS84MuHJ3jnhwvnTgonqJuGBDFkyKg00edWXdzBRInXA9TGD3kTTJHrnu3NPw==", "user"=>{"username"=>"Samwise", "password"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Samwise"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Samwise"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-09 15:28:31 -0500
+Processing by SubmissionsController#index as HTML
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions"[0m
+  Rendered submissions/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 63ms (Views: 47.3ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/session" for 127.0.0.1 at 2017-02-09 15:28:34 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"IPBQv0XfwSK3QmTGDFAkPKYlO1kKd8RUUr1o+ocP6JI0Sij9B0v2DaFtvzCDsXXHcD8BdSgeEVvr/Jbgt755Jw=="}
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-09 15:28:34 -0500
+Processing by SubmissionsController#index as HTML
+  Rendering submissions/index.html.erb within layouts/application
+  [1m[36mSubmission Load (0.4ms)[0m  [1m[34mSELECT "submissions".* FROM "submissions"[0m
+  Rendered submissions/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 0.4ms)
+
+

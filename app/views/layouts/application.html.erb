@@ -11,13 +11,16 @@
     <div id="main-container" class="container">
       <div class="row">
         <div class="col-xs-3">
-          <% if @current_user %>
+          <nav>
+            <% if @current_user %>
             <%= link_to "Welcome #{@current_user.username}!", user_path(@current_user) %>
             <%= link_to "Sign Out", session_path, method: :delete %>
           <% else %>
             <%= link_to "Sign In", new_session_path %>
             <%= link_to "Sign Up", new_user_path %>
           <% end %>
+          <%= link_to "Submissions", submissions_path %>
+        </nav>
         </div>
         <div class="col-xs-9">
           <%= yield %>
