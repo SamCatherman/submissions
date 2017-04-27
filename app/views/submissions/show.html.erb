@@ -3,7 +3,7 @@
 <p>Body: <%= @submission.body %></p>
 
 <%= link_to "Edit #{@submission.title}", edit_submission_path(@submission) %>
-<%= link_to "Back", submissions_path %>
 <p><%= link_to 'Delete Submission', submission_path(@submission),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></p>
+<%= link_to "Back", submissions_path %>
